@@ -1,3 +1,5 @@
+data.raw["lab"]["lab"].fast_replaceable_group = "lab"
+
 data:extend(
 {
   {
@@ -23,7 +25,7 @@ data:extend(
     },
     off_animation =
     {
-      filename = "__Unrealistic__/graphics/entity/lab/lab-0.png",
+      filename = "__UnRealistic__/graphics/entity/lab/lab-0.png",
       width = 113,
       height = 91,
       frame_count = 1,
@@ -32,23 +34,23 @@ data:extend(
     energy_source =
     {
       type = "burner",
-      usage_priority = "secondary-input"
+      usage_priority = "secondary-input",
+	  effectivity = 0.5,
+	  fuel_inventory_size = 1
     },
-    energy_usage = "0kW",
+    energy_usage = "1kW",
     inputs =
     {
-      "raw-wood",
+      "science-pack-0",
     },
-    researching_speed = 0.1,
-    module_specification =
-    {
-      module_slots = 0,
-      module_info_icon_shift = {0, 0.5},
-      module_info_multi_row_initial_height_modifier = -0.3
-    },
+    researching_speed = 0.5,
+   module_specification =
+   {
+     module_slots = 0,
+     module_info_icon_shift = {0, 0.5},
+     module_info_multi_row_initial_height_modifier = -0.3
+   },
     fast_replaceable_group = "lab",
   },
 }
 )
-
-data.raw["lab"]["lab"].fast_replaceable_group = "lab"

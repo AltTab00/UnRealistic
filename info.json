@@ -1,11 +1,11 @@
 {
   "name": "UnRealistic",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "factorio_version": "0.14",
   "title": "AltTab UnRealistic Mod",
   "author": "AlternateTab",
   "contact": "",
-  "homepage": "",
+  "homepage": "https://github.com/AltTab00/UnRealistic",
   "description": "The base mod for a complex research/processing of materials",
   "dependencies": ["base >= 0.14.0"],
   "license": "MIT"

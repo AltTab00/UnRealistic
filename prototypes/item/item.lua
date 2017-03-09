@@ -42,5 +42,22 @@ data:extend({
     order = "a[mining]-a[e-stone-axe]",
     speed = 2,
     stack_size = 20
-  }
+  },
+  {type = "item",
+    name = "charcoal",
+    icon = "__UnRealistic__/graphics/icons/charcoal.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "raw-material",
+    order = "a[charcoal]",
+    stack_size = 200
+  },
+      {type = "item",
+    name = "windmill",
+    icon = "__UnRealistic__/graphics/icons/windmill.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "production-machine",
+    order = "g[windmill]",
+    place_result = "windmill",
+    stack_size = 10
+  },
 })

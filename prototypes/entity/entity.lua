@@ -52,5 +52,45 @@ data:extend(
    },
     fast_replaceable_group = "lab",
   },
+  {
+    type = "assembling-machine",
+    name = "windmill",
+    icon = "__UnRealistic__/graphics/icons/windmill.png",
+    flags = {"placeable-neutral","placeable-player", "player-creation"},
+    minable = {mining_time = 1, result = "windmill"},
+    max_health = 250,
+    corpse = "big-remnants",
+    collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+	crafting_categories = {"crushing"},
+    crafting_speed = 1.25,
+	off_animation =
+    {
+	  frame_count = 1,
+	  width = 113,
+      height = 91,
+      frame_count = 1,
+      shift = {0.2, 0.15},
+      filename = "__UnRealistic__/graphics/entity/windmill.png"
+	},
+	on_animation =
+    {
+	  frame_count = 1,
+	  width = 113,
+      height = 91,
+      frame_count = 1,
+      shift = {0.2, 0.15},
+      filename = "__UnRealistic__/graphics/entity/windmill.png"
+	},
+    energy_source =
+    {
+      type = "burner",
+      usage_priority = "secondary-input",
+	  effectivity = 1,
+	  fuel_inventory_size = 1
+    },
+    energy_usage = "4kW",
+  ingredient_count = 1,
+  },
 }
 )

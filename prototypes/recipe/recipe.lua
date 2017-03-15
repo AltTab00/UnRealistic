@@ -64,5 +64,17 @@ data:extend({
     },
     result = "stone-axe"
   },
+  {
+    type = "recipe",
+    name = "windmill",
+    enabled = "false",
+    energy_required = 10,
+    ingredients =
+    {
+      {"raw-wood", 10},
+	  {"stone", 2}
+    },
+    result = "stone-axe"
+  },
 }
 )

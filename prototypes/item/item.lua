@@ -1,5 +1,6 @@
 data:extend({
-    {type = "item",
+  {
+	type = "item",
     name = "lab-0",
     icon = "__UnRealistic__/graphics/icons/lab-0.png",
     flags = {"goes-to-quickbar"},
@@ -42,5 +43,39 @@ data:extend({
     order = "a[mining]-a[e-stone-axe]",
     speed = 2,
     stack_size = 20
-  }
+  },
+  {type = "item",
+    name = "charcoal",
+    icon = "__UnRealistic__/graphics/icons/charcoal.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "raw-material",
+    order = "a[charcoal]",
+    stack_size = 200
+  },
+    {type = "item",
+    name = "windmill",
+    icon = "__UnRealistic__/graphics/icons/windmill.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "production-machine",
+    order = "g[windmill]",
+    place_result = "windmill",
+    stack_size = 10
+  },
+  {type = "item",
+    name = "crushed-copper",
+    icon = "__UnRealistic__/graphics/icons/crushed-chalcocite.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "raw-material",
+    order = "a[crushed-copper]",
+    stack_size = 200
+  },
+  {type = "item",
+    name = "crushed-iron",
+    icon = "__UnRealistic__/graphics/icons/crushed-iron.png",
+    flags = {"goes-to-main-inventory"},
+    subgroup = "raw-material",
+    order = "a[crushed-iron]",
+    stack_size = 200
+  },
+  
 })

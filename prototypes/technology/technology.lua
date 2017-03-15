@@ -1,4 +1,4 @@
-data.raw["technology"]["steel-processing"].prerequisites = {"mining","metalworking"}
+data.raw["technology"]["steel-processing"].prerequisites = {"mining","advanced_researching"}
 data.raw["technology"]["automation"].prerequisites = {"advanced_researching"}
 data.raw["technology"]["logistics"].prerequisites = {"advanced_researching"}
 data.raw["technology"]["optics"].prerequisites = {"advanced_researching"}
@@ -176,7 +176,7 @@ data:extend({
        prerequisites = {"researching"},
 	   unit =
       {
-        count = 10,
+        count = 5,
         ingredients =
         {
           {"science-pack-0", 2}
@@ -193,6 +193,10 @@ data:extend({
         {
             type = "unlock-recipe",
             recipe = "small-electric-pole"
+        },
+		{
+            type = "unlock-recipe",
+            recipe = "transport-belt"
         },
 		{
             type = "unlock-recipe",
@@ -225,10 +229,6 @@ data:extend({
       icon = "__base__/graphics/icons/electronic-circuit.png",
 	  effects =
       {
-        {
-            type = "unlock-recipe",
-            recipe = "transport-belt"
-        },
 		{
             type = "unlock-recipe",
             recipe = "inserter"
@@ -275,14 +275,6 @@ data:extend({
 				{
             type = "unlock-recipe",
             recipe = "repair-pack"
-        },
-				{
-            type = "unlock-recipe",
-            recipe = "electric-mining-drill"
-        },
-				{
-            type = "unlock-recipe",
-            recipe = "electronic-circuit"
         },
 		
       },
@@ -362,7 +354,7 @@ data:extend({
         },
 		
       },
-       prerequisites = {"electronics-0"},
+       prerequisites = {"advanced_researching"},
 	   unit =
       {
         count = 5,
@@ -371,6 +363,45 @@ data:extend({
           {"science-pack-1", 1}
         },
         time = 10
+      }
+  },
+  {
+      type = "technology",
+	  name = "windmill",
+      icon = "__UnRealistic__/graphics/icons/windmill.png",
+	  effects =
+      {
+        {
+            type = "unlock-recipe",
+            recipe = "windmill"
+        },
+		{
+            type = "unlock-recipe",
+            recipe = "crushed-copper"
+        },
+		{
+            type = "unlock-recipe",
+            recipe = "crushed-iron"
+        },
+		{
+            type = "unlock-recipe",
+            recipe = "copper-ore-c"
+        },
+		{
+            type = "unlock-recipe",
+            recipe = "iron-ore-c"
+        },
+		
+      },
+       prerequisites = {"woodworking"},
+	   unit =
+      {
+        count = 2,
+        ingredients =
+        {
+          {"science-pack-0", 5}
+        },
+        time = 20
       }
   },
 })

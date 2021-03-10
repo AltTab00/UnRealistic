@@ -2,12 +2,9 @@ data.raw["technology"]["steel-processing"].prerequisites = {"mining","metalworki
 data.raw["technology"]["automation"].prerequisites = {"advanced_researching"}
 data.raw["technology"]["logistics"].prerequisites = {"advanced_researching"}
 data.raw["technology"]["optics"].prerequisites = {"advanced_researching"}
-data.raw["technology"]["turrets"].prerequisites = {"advanced_researching","bb_guns"}
-data.raw["technology"]["stone-walls"].prerequisites = {"smelting"}
 data.raw["technology"]["landfill"].prerequisites = {"advanced_researching_2"}
 data.raw["technology"]["toolbelt"].prerequisites = {"advanced_researching_2"}
 data.raw["technology"]["military"].prerequisites = {"advanced_researching","bb_guns"}
-data.raw["technology"]["armor-making"].prerequisites = {"advanced_researching"}
 data.raw["technology"]["oil-processing"].prerequisites = {"advanced_researching_2"}
 
 
@@ -17,6 +14,7 @@ data:extend({
       type = "technology",
 	  name = "researching",
       icon = "__UnRealistic__/graphics/icons/lab-0.png",
+			icon_size = 32,
 	  upgrade = true,
 	  order = "z-a-a",
       unit =
@@ -29,32 +27,11 @@ data:extend({
         time = 5
       }
   },
-   {
-      type = "technology",
-	  name = "mining",
-      icon = "__UnRealistic__/graphics/icons/stone-axe.png",
-	  effects =
-      {
-        {
-            type = "unlock-recipe",
-            recipe = "stone-axe"
-        }
-      },
-       prerequisites = {"researching"},
-	   unit =
-      {
-        count = 2,
-        ingredients =
-        {
-          {"science-pack-0", 2}
-        },
-        time = 5
-      }
-	},
-	  {
+ 	  {
       type = "technology",
 	  name = "smelting",
       icon = "__base__/graphics/icons/stone-furnace.png",
+			icon_size = 32,
 	  effects =
       {
         {
@@ -89,6 +66,7 @@ data:extend({
       type = "technology",
 	  name = "burner",
       icon = "__base__/graphics/icons/burner-inserter.png",
+			icon_size = 32,
 	  effects =
       {
         {
@@ -119,12 +97,8 @@ data:extend({
       type = "technology",
 	  name = "metalworking",
       icon = "__base__/graphics/icons/iron-plate.png",
-	  effects =
-      {
-        {
-            type = "unlock-recipe",
-            recipe = "iron-axe"
-        },
+			icon_size = 32,
+	  effects = {
 		{
             type = "unlock-recipe",
             recipe = "iron-chest"
@@ -144,8 +118,8 @@ data:extend({
 		{
             type = "unlock-recipe",
             recipe = "iron-gear-wheel"
-        },
-      },
+        }
+			},
        prerequisites = {"smelting"},
 	   unit =
       {
@@ -161,16 +135,17 @@ data:extend({
       type = "technology",
 	  name = "woodworking",
       icon = "__base__/graphics/icons/wood.png",
+			icon_size = 32,
 	  effects =
       {
         {
             type = "unlock-recipe",
             recipe = "wooden-chest"
         },
-		{
-            type = "unlock-recipe",
-            recipe = "wood"
-        },
+--		{
+ --           type = "unlock-recipe",
+ --           recipe = "wood"
+--        },
 		
       },
        prerequisites = {"researching"},
@@ -188,6 +163,7 @@ data:extend({
       type = "technology",
 	  name = "electricity",
       icon = "__base__/graphics/icons/small-electric-pole.png",
+			icon_size = 32,
 	  effects =
       {
         {
@@ -223,6 +199,7 @@ data:extend({
       type = "technology",
 	  name = "electronics-0",
       icon = "__base__/graphics/icons/electronic-circuit.png",
+			icon_size = 32,
 	  effects =
       {
         {
@@ -262,6 +239,7 @@ data:extend({
       type = "technology",
 	  name = "advanced_researching",
       icon = "__base__/graphics/icons/lab.png",
+			icon_size = 32,
 	  effects =
       {
         {
@@ -270,7 +248,7 @@ data:extend({
         },
 		{
             type = "unlock-recipe",
-            recipe = "science-pack-1"
+            recipe = "automation-science-pack"
         },
 				{
             type = "unlock-recipe",
@@ -304,11 +282,12 @@ data:extend({
 	  name = "advanced_researching_2",
 	  order = "z-a-a",
       icon = "__base__/graphics/icons/lab.png",
+			icon_size = 32,
 	  effects =
       {
         {
             type = "unlock-recipe",
-            recipe = "science-pack-2"
+            recipe = "logistic-science-pack"
         },
 		
       },
@@ -319,7 +298,7 @@ data:extend({
         count = 5,
         ingredients =
         {
-          {"science-pack-1", 1}
+          {"automation-science-pack", 1}
         },
         time = 10
       }
@@ -328,6 +307,7 @@ data:extend({
       type = "technology",
 	  name = "bb_guns",
       icon = "__base__/graphics/icons/pistol.png",
+			icon_size = 32,
 	  effects =
       {
         {
@@ -354,6 +334,7 @@ data:extend({
       type = "technology",
 	  name = "radar",
       icon = "__base__/graphics/icons/radar.png",
+			icon_size = 32,
 	  effects =
       {
         {
@@ -368,9 +349,57 @@ data:extend({
         count = 5,
         ingredients =
         {
-          {"science-pack-1", 1}
+          {"automation-science-pack", 1}
         },
         time = 10
       }
+  },
+	{
+    type = "technology",
+    name = "mining",
+    icon_size = 32, icon_mipmaps = 4,
+    icon = "__UnRealistic__/graphics/icons/stone-axe.png",
+    effects =
+    {
+      {
+        type = "character-mining-speed",
+        modifier = 0,2
+      }
+    },
+    prerequisites = {"researching"},
+    unit =
+    {
+      count = 2,
+      ingredients =
+      {
+        {"science-pack-0", 2}
+      },
+      time = 5
+    },
+    order = "c-c-a"
+  },
+	{
+    type = "technology",
+    name = "iron-pickaxe",
+    icon_size = 32, icon_mipmaps = 4,
+    icon = "__UnRealistic__/graphics/icons/stone-axe.png",
+    effects =
+    {
+      {
+        type = "character-mining-speed",
+        modifier = 0,5
+      }
+    },
+    prerequisites = {"metalworking"},
+    unit =
+    {
+      count = 15,
+      ingredients =
+      {
+        {"science-pack-0", 2}
+      },
+      time = 5
+    },
+    order = "c-c-a"
   },
 })

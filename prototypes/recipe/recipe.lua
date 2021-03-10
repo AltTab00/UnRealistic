@@ -1,4 +1,3 @@
-data.raw["recipe"]["iron-axe"].enabled = false
 data.raw["recipe"]["wooden-chest"].enabled = false
 data.raw["recipe"]["iron-chest"].enabled = false
 data.raw["recipe"]["transport-belt"].enabled = false
@@ -16,15 +15,12 @@ data.raw["recipe"]["electric-mining-drill"].enabled = false
 data.raw["recipe"]["offshore-pump"].enabled = false
 data.raw["recipe"]["stone-furnace"].enabled = false
 data.raw["recipe"]["lab"].enabled = false
-data.raw["recipe"]["wood"].enabled = false
 data.raw["recipe"]["iron-plate"].enabled = false
 data.raw["recipe"]["copper-plate"].enabled = false
 data.raw["recipe"]["copper-cable"].enabled = false
 data.raw["recipe"]["iron-stick"].enabled = false
 data.raw["recipe"]["iron-gear-wheel"].enabled = false
 data.raw["recipe"]["electronic-circuit"].enabled = false
-data.raw["recipe"]["science-pack-1"].enabled = false
-data.raw["recipe"]["science-pack-2"].enabled = false
 data.raw["recipe"]["pistol"].enabled = false
 data.raw["recipe"]["firearm-magazine"].enabled = false
 data.raw["recipe"]["radar"].enabled = false
@@ -37,7 +33,7 @@ data:extend({
     energy_required = 10,
     ingredients =
     {
-      {"raw-wood", 10}
+      {"wood", 10}
     },
     result = "lab-0"
   },
@@ -48,21 +44,9 @@ data:extend({
     energy_required = 5,
     ingredients =
     {
-      {"raw-wood", 1}
+      {"wood", 1}
     },
     result = "science-pack-0"
-  },
-   {
-    type = "recipe",
-    name = "stone-axe",
-    enabled = "false",
-    energy_required = 10,
-    ingredients =
-    {
-      {"raw-wood", 2},
-	  {"stone", 1}
-    },
-    result = "stone-axe"
   },
 }
 )

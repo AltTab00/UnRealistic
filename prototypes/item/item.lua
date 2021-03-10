@@ -2,7 +2,7 @@ data:extend({
     {type = "item",
     name = "lab-0",
     icon = "__UnRealistic__/graphics/icons/lab-0.png",
-    flags = {"goes-to-quickbar"},
+		icon_size = 32,
     subgroup = "production-machine",
     order = "g[lab-0]",
     place_result = "lab-0",
@@ -12,7 +12,7 @@ data:extend({
     type = "tool",
     name = "science-pack-0",
     icon = "__UnRealistic__/graphics/icons/science-pack-0.png",
-    flags = {"goes-to-main-inventory"},
+		icon_size = 32,
     subgroup = "science-pack",
     order = "a[science-pack-0]",
     stack_size = 200,
@@ -23,7 +23,7 @@ data:extend({
     type = "mining-tool",
     name = "stone-axe",
     icon = "__UnRealistic__/graphics/icons/stone-axe.png",
-    flags = {"goes-to-main-inventory"},
+		icon_size = 32,
     action =
     {
       type="direct",

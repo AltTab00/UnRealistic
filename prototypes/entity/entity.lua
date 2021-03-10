@@ -1,18 +1,23 @@
 data.raw["lab"]["lab"].fast_replaceable_group = "lab"
 
-data:extend(
+data:extend({
 {
-  {
     type = "lab",
     name = "lab-0",
-    icon = "__UnRealistic__/graphics/icons/lab-0.png",
-    flags = {"placeable-player", "player-creation"},
+		energy_source =
+    {
+      type = "burner",
+      usage_priority = "secondary-input",
+	  effectivity = 0.5,
+	  fuel_inventory_size = 1
+    },
+	  energy_usage = "1kW",
     minable = {mining_time = 1, result = "lab-0"},
     max_health = 250,
     corpse = "big-remnants",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    light = {intensity = 0.75, size = 8},
+   light = {intensity = 0.75, size = 8},
     on_animation =
     {
       filename = "__UnRealistic__/graphics/entity/lab/lab-0.png",
@@ -31,13 +36,6 @@ data:extend(
       frame_count = 1,
       shift = {0.2, 0.15}
     },
-    energy_source =
-    {
-      type = "burner",
-      usage_priority = "secondary-input",
-	  effectivity = 0.5,
-	  fuel_inventory_size = 1
-    },
     energy_usage = "1kW",
     inputs =
     {
@@ -51,6 +49,8 @@ data:extend(
      module_info_multi_row_initial_height_modifier = -0.3
    },
     fast_replaceable_group = "lab",
-  },
-}
-)
+    icon = "__UnRealistic__/graphics/icons/lab-0.png",
+		icon_size = 32,
+		flags = {"placeable-player", "player-creation"},
+		}
+})

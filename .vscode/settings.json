@@ -1,0 +1,14 @@
+{
+    "Lua.diagnostics.globals": [
+        "script",
+        "defines",
+        "game",
+        "data",
+        "remote",
+        "player",
+        "resource",
+        "sounds",
+        "resource_autoplace",
+        "bobmods"
+    ]
+}

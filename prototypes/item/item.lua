@@ -1,46 +1,23 @@
 data:extend({
     {type = "item",
-    name = "lab-0",
-    icon = "__UnRealistic__/graphics/icons/lab-0.png",
-		icon_size = 32,
-    subgroup = "production-machine",
-    order = "g[lab-0]",
-    place_result = "lab-0",
+    name = "ai-unit",
+    icon = "__UnRealistic__/graphics/icons/AI_unit.png",
+		icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "intermediate-product",
+    order = "g[ai-unit]",
     stack_size = 10
   },
   {
-    type = "tool",
-    name = "science-pack-0",
-    icon = "__UnRealistic__/graphics/icons/science-pack-0.png",
-		icon_size = 32,
-    subgroup = "science-pack",
-    order = "a[science-pack-0]",
-    stack_size = 200,
-    durability = 1,
-    durability_description_key = "description.science-pack-remaining-amount"
+    type="item",
+    name = "plank",
+    icon = "__UnRealistic__/graphics/icons/plank.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "intermediate-product",
+    fuel_value = "2MJ",
+    fuel_category = "fire",
+    order = "a[plank]",
+    stack_size = 100
   },
-  {
-    type = "mining-tool",
-    name = "stone-axe",
-    icon = "__UnRealistic__/graphics/icons/stone-axe.png",
-		icon_size = 32,
-    action =
-    {
-      type="direct",
-      action_delivery =
-      {
-        type = "instant",
-        target_effects =
-        {
-            type = "damage",
-            damage = { amount = 3 , type = "physical"}
-        }
-      }
-    },
-    durability = 1000,
-    subgroup = "tool",
-    order = "a[mining]-a[e-stone-axe]",
-    speed = 2,
-    stack_size = 20
-  }
 })

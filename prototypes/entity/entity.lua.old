@@ -36,7 +36,6 @@ data:extend({
       frame_count = 1,
       shift = {0.2, 0.15}
     },
-    energy_usage = "1kW",
     inputs =
     {
       "science-pack-0",

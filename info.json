@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "factorio_version": "1.1",
   "title": "AltTab UnRealistic Mod",
-  "author": "AlternateTab",
-  "contact": "Check the mod portal \"Discussions\" tab.",
+  "author": "AltTab",
+  "contact": "None... for now",
   "homepage": "",
   "description": "The base mod for a complex research/processing of materials",
-  "dependencies": ["base >= 1.1.0"],
-  "license": "CC BY 4.0"
+  "dependencies": ["base >= 1.1.0", "boblibrary >= 1.1.2"],
+  "license": "CC BY 4.0",
 }

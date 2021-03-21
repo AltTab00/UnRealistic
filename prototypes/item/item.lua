@@ -20,4 +20,42 @@ data:extend({
     order = "a[plank]",
     stack_size = 100
   },
+  {
+    type="tool",
+    name = "wood-sample",
+    icon = "__UnRealistic__/graphics/icons/wood-sample.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    fuel_value = "2MJ",
+    fuel_category = "fire",
+    subgroup = "science-pack",
+    order = "a[sample-a]",
+    stack_size = 100,
+    durability = 1,
+    durability_description_key = "description.science-pack-remaining-amount-key",
+    durability_description_value = "description.science-pack-remaining-amount-value"
+  },
+  {
+    type="tool",
+    name = "stone-sample",
+    icon = "__UnRealistic__/graphics/icons/stone-sample.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "science-pack",
+    order = "a[sample-a]",
+    stack_size = 100,
+    durability = 1,
+    durability_description_key = "description.science-pack-remaining-amount-key",
+    durability_description_value = "description.science-pack-remaining-amount-value"
+  },
+  {
+    type = "item",
+    name = "wooden-lab",
+    icon = "__UnRealistic__/graphics/icons/wooden-lab.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "production-machine",
+    order = "g[wooden-lab]",
+    place_result = "wooden-lab",
+   stack_size = 10
+  },
 })

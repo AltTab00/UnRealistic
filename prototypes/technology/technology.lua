@@ -1,33 +1,148 @@
-data.raw["technology"]["steel-processing"].prerequisites = {"mining","metalworking"}
-data.raw["technology"]["automation"].prerequisites = {"advanced_researching"}
-data.raw["technology"]["logistics"].prerequisites = {"advanced_researching"}
-data.raw["technology"]["optics"].prerequisites = {"advanced_researching"}
-data.raw["technology"]["landfill"].prerequisites = {"advanced_researching_2"}
-data.raw["technology"]["toolbelt"].prerequisites = {"advanced_researching_2"}
-data.raw["technology"]["military"].prerequisites = {"advanced_researching","bb_guns"}
-data.raw["technology"]["oil-processing"].prerequisites = {"advanced_researching_2"}
+data.raw["technology"]["steel-axe"].prerequisites = {"steel-processing","iron-pickaxe"}
+data.raw["technology"]["steel-axe"].effects = {{type = "character-mining-speed", modifier = 0.4}}
+--data.raw["technology"]["steel-processing"].prerequisites = {"mining","metalworking"}
+--temp
+data.raw["technology"]["steel-processing"].prerequisites = {"material-sampling"}
+--temp
+data.raw["technology"]["automation"].prerequisites = {"material-sampling"}
+--temp
+data.raw["technology"]["logistics"].prerequisites = {"material-sampling"}
+--temp
+data.raw["technology"]["optics"].prerequisites = {"material-sampling"}
+--temp
+data.raw["technology"]["landfill"].prerequisites = {"material-sampling"}
+--temp
+data.raw["technology"]["toolbelt"].prerequisites = {"material-sampling"}
+--temp
+data.raw["technology"]["military"].prerequisites = {"material-sampling"}
+--temp
+data.raw["technology"]["logistic-science-pack"].prerequisites = {"material-sampling"}
+--temp
+data.raw["technology"]["oil-processing"].prerequisites = {"material-sampling"}
+--temp
+data.raw["technology"]["stone-wall"].prerequisites = {"material-sampling"}
+--temp
+data.raw["technology"]["gun-turret"].prerequisites = {"material-sampling"}
 
 
 
 data:extend({
+
   {
       type = "technology",
-	  name = "researching",
-      icon = "__UnRealistic__/graphics/icons/lab-0.png",
-			icon_size = 32,
-	  upgrade = true,
-	  order = "z-a-a",
+	  name = "material-sampling",
+      icon = "__UnRealistic__/graphics/icons/wooden-lab.png",
+      icon_size = 64, icon_mipmaps = 4,
+	    order = "a-a-a",
       unit =
       {
         count = 2,
         ingredients =
         {
-          {"science-pack-0", 2}
+          {"wood-sample", 1}
         },
         time = 5
       }
   },
- 	  {
+  {
+    type = "technology",
+  name = "woodworking",
+    icon = "__UnRealistic__/graphics/entity/technology/woodworking.png",
+    icon_size = 72,  icon_mipmaps = 4,
+    order = "a-a-b",
+  effects =
+    {
+      {
+          type = "unlock-recipe",
+          recipe = "wooden-chest"
+      },
+    },
+     prerequisites = {"material-sampling"},
+   unit =
+    {
+      count = 2,
+      ingredients =
+      {
+        {"wood-sample", 2}
+      },
+      time = 5
+    }
+  },
+  {
+      type = "technology",
+      name = "stone-pickaxe",
+      icon = "__UnRealistic__/graphics/entity/technology/stone-axe.png",
+      icon_size = 256, icon_mipmaps = 4,
+      order = "a-a-c",
+      effects =
+      {
+        {
+        type = "character-mining-speed",
+        modifier = 0.3
+        }
+      },
+      prerequisites = {"woodworking"},
+      unit =
+      {
+      count = 5,
+      ingredients =
+      {
+        {"wood-sample", 2}
+      },
+      time = 5
+    }
+  },
+  {
+    type = "technology",
+    name = "iron-pickaxe",
+    icon = "__UnRealistic__/graphics/entity/technology/iron-axe.png",
+    icon_size = 256, icon_mipmaps = 4,
+    order = "a-a-c",
+    effects =
+    {
+      {
+      type = "character-mining-speed",
+      modifier = 0.3
+      }
+    },
+    prerequisites = {"stone-pickaxe","woodworking"},
+    unit =
+    {
+    count = 10,
+    ingredients =
+    {
+      {"wood-sample", 2} --address ingredients
+    },
+    time = 5
+  }
+},
+  {
+    type = "technology",
+    name = "stone-sample",
+    icon = "__UnRealistic__/graphics/icons/stone-sample.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    order = "a-b-a",
+    prerequisites = {"material-sampling"},
+    unit =
+    {
+    count = 2,
+    ingredients = 
+    {
+      {"wood-sample", 2}
+    },
+    time = 5
+    },
+    effects =
+    {
+      {
+          type = "unlock-recipe",
+          recipe = "stone-sample"
+      },
+    },
+  },
+  --[[
+ 	{
       type = "technology",
 	  name = "smelting",
       icon = "__base__/graphics/icons/stone-furnace.png",
@@ -131,34 +246,7 @@ data:extend({
         time = 5
       }
   },
-  {
-      type = "technology",
-	  name = "woodworking",
-      icon = "__base__/graphics/icons/wood.png",
-			icon_size = 32,
-	  effects =
-      {
-        {
-            type = "unlock-recipe",
-            recipe = "wooden-chest"
-        },
---		{
- --           type = "unlock-recipe",
- --           recipe = "wood"
---        },
-		
-      },
-       prerequisites = {"researching"},
-	   unit =
-      {
-        count = 10,
-        ingredients =
-        {
-          {"science-pack-0", 2}
-        },
-        time = 5
-      }
-  },
+  
   {
       type = "technology",
 	  name = "electricity",
@@ -387,7 +475,7 @@ data:extend({
     {
       {
         type = "character-mining-speed",
-        modifier = 0,5
+        modifier = 0.5
       }
     },
     prerequisites = {"metalworking"},
@@ -401,5 +489,5 @@ data:extend({
       time = 5
     },
     order = "c-c-a"
-  },
+  },]]--
 })

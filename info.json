@@ -8,5 +8,5 @@
   "homepage": "",
   "description": "The base mod for a complex research/processing of materials",
   "dependencies": ["base >= 1.1.0", "boblibrary >= 1.1.2"],
-  "license": "CC BY 4.0",
+  "license": "CC BY 4.0"
 }

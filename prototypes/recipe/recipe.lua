@@ -1,24 +1,45 @@
 data.raw["recipe"]["wooden-chest"].enabled = false
+--
 data.raw["recipe"]["iron-chest"].enabled = false
+--
 data.raw["recipe"]["transport-belt"].enabled = false
+--
 data.raw["recipe"]["burner-inserter"].enabled = false
+--
 data.raw["recipe"]["inserter"].enabled = false
+--
 data.raw["recipe"]["small-electric-pole"].enabled = false
+--
 data.raw["recipe"]["pipe-to-ground"].enabled = false
+--
 data.raw["recipe"]["stone-brick"].enabled = false
+--
 data.raw["recipe"]["repair-pack"].enabled = false
+--
 data.raw["recipe"]["boiler"].enabled = false
+--
 data.raw["recipe"]["offshore-pump"].enabled = false
+--
 data.raw["recipe"]["stone-furnace"].enabled = false
+--
 data.raw["recipe"]["lab"].enabled = false
+--
 data.raw["recipe"]["iron-plate"].enabled = false
+--
 data.raw["recipe"]["copper-cable"].enabled = false
+--
 data.raw["recipe"]["copper-plate"].enabled = false
+--
 data.raw["recipe"]["iron-stick"].enabled = false
+--
 data.raw["recipe"]["automation-science-pack"].enabled = false
+--
 data.raw["recipe"]["pistol"].enabled = false
+--
 data.raw["recipe"]["firearm-magazine"].enabled = false
+--
 data.raw["recipe"]["radar"].enabled = false
+--
 data.raw["recipe"]["light-armor"].enabled = false
 
 
@@ -192,6 +213,37 @@ data:extend({
       {
         {"wood", 2}, 
       },
-    result = "plank",2
+    result = "plank",
+    result_count = 2
+  },
+  {
+    type = "recipe",
+    name = "wood-lab",
+    ingredients =
+      {
+        {"plank", 10},
+        {"ai-unit", 1},
+      },
+    result = "wooden-lab"
+  },
+  {
+    type = "recipe",
+    name = "wood-sample",
+    ingredients =
+      {
+        {"wood", 2},
+      },
+    result = "wood-sample"
+  },
+  {
+    type = "recipe",
+    name = "stone-sample",
+    enabled = false,
+    ingredients =
+      {
+        {"malachite", 1},
+        {"goethite", 1},
+      },
+    result = "stone-sample"
   }
 })

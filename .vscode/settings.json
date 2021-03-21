@@ -9,6 +9,19 @@
         "resource",
         "sounds",
         "resource_autoplace",
-        "bobmods"
+        "bobmods",
+        "autoplace_settingsStarter",
+        "autoplace_settings",
+        "goethite",
+        "magnetite",
+        "malachite",
+        "chalcocite",
+        "util",
+        "granite",
+        "peridotite",
+        "anorthosite",
+        "ilmenite",
+        "lignite",
+        "anthracite"
     ]
 }

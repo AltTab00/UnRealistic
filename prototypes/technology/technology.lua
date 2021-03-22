@@ -139,44 +139,88 @@ data:extend({
           type = "unlock-recipe",
           recipe = "stone-sample"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "use-rock-gt"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "use-rock-gr"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "use-rock-pd"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "use-rock-an"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "use-rock-il"
+      },
     },
   },
-  --[[
- 	{
-      type = "technology",
-	  name = "smelting",
-      icon = "__base__/graphics/icons/stone-furnace.png",
-			icon_size = 32,
-	  effects =
+  {
+    type = "technology",
+  name = "furnaces",
+    icon = "__UnRealistic__/graphics/entity/technology/basic-furnace.png",
+    icon_size = 146,
+    icon_mipmaps = 4,
+  effects =
+    {
       {
-        {
-            type = "unlock-recipe",
-            recipe = "stone-furnace"
-        },
-		{
-            type = "unlock-recipe",
-            recipe = "stone-brick"
-        },
-		{
-            type = "unlock-recipe",
-            recipe = "copper-plate"
-        },
-		{
-            type = "unlock-recipe",
-            recipe = "iron-plate"
-        }
+          type = "unlock-recipe",
+          recipe = "basic-furnace"
       },
-       prerequisites = {"researching"},
-	   unit =
+  {
+          type = "unlock-recipe",
+          recipe = "stone-brick"
+      },
+    },
+     prerequisites = {"stone-sample"},
+   unit =
+    {
+      count = 5,
+      ingredients =
       {
-        count = 10,
-        ingredients =
-        {
-          {"science-pack-0", 2}
-        },
-        time = 5
-      }
+        {"wood-sample", 1},
+        {"stone-sample", 2}
+      },
+      time = 5
+    }
   },
+  {
+    type = "technology",
+  name = "smelting",
+    icon = "__UnRealistic__/graphics/entity/technology/basic-furnace.png",
+    icon_size = 146,
+    icon_mipmaps = 4,
+  effects =
+    {
+  {
+          type = "unlock-recipe",
+          recipe = "copper-plate-raw"
+      },
+  {
+          type = "unlock-recipe",
+          recipe = "iron-plate-raw"
+      }
+    },
+     prerequisites = {"furnaces"},
+   unit =
+    {
+      count = 5,
+      ingredients =
+      {
+        {"wood-sample", 1},
+        {"stone-sample", 3}
+      },
+      time = 5
+    }
+  },
+
+  --[[
   {
       type = "technology",
 	  name = "burner",
@@ -442,52 +486,5 @@ data:extend({
         time = 10
       }
   },
-	{
-    type = "technology",
-    name = "mining",
-    icon_size = 32, icon_mipmaps = 4,
-    icon = "__UnRealistic__/graphics/icons/stone-axe.png",
-    effects =
-    {
-      {
-        type = "character-mining-speed",
-        modifier = 0,2
-      }
-    },
-    prerequisites = {"researching"},
-    unit =
-    {
-      count = 2,
-      ingredients =
-      {
-        {"science-pack-0", 2}
-      },
-      time = 5
-    },
-    order = "c-c-a"
-  },
-	{
-    type = "technology",
-    name = "iron-pickaxe",
-    icon_size = 32, icon_mipmaps = 4,
-    icon = "__UnRealistic__/graphics/icons/stone-axe.png",
-    effects =
-    {
-      {
-        type = "character-mining-speed",
-        modifier = 0.5
-      }
-    },
-    prerequisites = {"metalworking"},
-    unit =
-    {
-      count = 15,
-      ingredients =
-      {
-        {"science-pack-0", 2}
-      },
-      time = 5
-    },
-    order = "c-c-a"
-  },]]--
+]]--
 })

@@ -22,6 +22,8 @@
         "anorthosite",
         "ilmenite",
         "lignite",
-        "anthracite"
+        "anthracite",
+        "make_rotated_animation_variations_from_sheet",
+        "sandstone"
     ]
 }

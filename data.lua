@@ -5,7 +5,8 @@ require("prototypes.entity.entity")
 require("prototypes.recipe.recipe")
 require("prototypes.technology.technology")
 
---Ore Related
+--Ore generation--###################################################
+
 bobmods.lib.resource.generate(goethite)
 data.raw.resource["goethite"].autoplace = resource_autoplace.resource_autoplace_settings
   {
@@ -40,6 +41,9 @@ data.raw.resource["lignite"].autoplace = resource_autoplace.resource_autoplace_s
     regular_rq_factor_multiplier = 1,
   }
 bobmods.lib.resource.generate(anthracite)
+bobmods.lib.resource.generate(sandstone)
+
+--Original ore removal--###################################################
 
 data.raw.resource['iron-ore'].autoplace = nil
 data.raw['autoplace-control']['iron-ore'] = nil
@@ -84,3 +88,9 @@ for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
       preset.basic_settings.autoplace_controls['uranium-ore'] = nil
     end
 end
+
+--Rock Overhaul--###################################################
+
+data.raw["simple-entity"]['rock-huge'].minable.results = {{name = "granite", amount_min = 24, amount_max = 50}, {name = "lignite", amount_min = 24, amount_max = 50}}
+data.raw["simple-entity"]['rock-big'].minable.results = {{name = "anorthosite", amount_min = 12, amount_max = 23}, {name = "magnetite", amount_min = 10, amount_max = 20}}
+data.raw["simple-entity"]['sand-rock-big'].minable.results = {{name = "sandstone", amount_min = 19, amount_max = 25}}

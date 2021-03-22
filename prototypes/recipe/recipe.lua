@@ -1,4 +1,5 @@
 data.raw["recipe"]["wooden-chest"].enabled = false
+data.raw["recipe"]["stone-brick"].enabled = false
 --
 data.raw["recipe"]["iron-chest"].enabled = false
 --
@@ -11,8 +12,6 @@ data.raw["recipe"]["inserter"].enabled = false
 data.raw["recipe"]["small-electric-pole"].enabled = false
 --
 data.raw["recipe"]["pipe-to-ground"].enabled = false
---
-data.raw["recipe"]["stone-brick"].enabled = false
 --
 data.raw["recipe"]["repair-pack"].enabled = false
 --
@@ -222,6 +221,7 @@ data:extend({
     ingredients =
       {
         {"plank", 10},
+        --{"stone", 5},
         {"ai-unit", 1},
       },
     result = "wooden-lab"
@@ -245,5 +245,83 @@ data:extend({
         {"goethite", 1},
       },
     result = "stone-sample"
-  }
+  },
+  {
+    type = "recipe",
+    name = "use-rock-gt",
+    enabled = false,
+    ingredients =
+      {
+        {"goethite", 1},
+      },
+    result = "stone"
+  },
+  {
+    type = "recipe",
+    name = "use-rock-gr",
+    enabled = false,
+    ingredients =
+      {
+        {"granite", 1},
+      },
+    result = "stone"
+  },
+    {
+    type = "recipe",
+    name = "use-rock-pd",
+    enabled = false,
+    ingredients =
+      {
+        {"peridotite", 1},
+      },
+    result = "stone"
+  },
+  {
+    type = "recipe",
+    name = "use-rock-an",
+    enabled = false,
+    ingredients =
+      {
+        {"anorthosite", 1},
+      },
+    result = "stone"
+  },
+  {
+    type = "recipe",
+    name = "use-rock-il",
+    enabled = false,
+    ingredients =
+      {
+        {"ilmenite", 1},
+      },
+    result = "stone"
+  },
+  {
+    type = "recipe",
+    name = "basic-furnace",
+    enabled = false,
+    ingredients =
+      {
+        {"stone", 10},
+      },
+    result = "basic-furnace"
+  },
+  {
+    type = "recipe",
+    name = "iron-plate-raw",
+    hidden = true,
+    category = "smelting",
+    energy_required = 5,
+    ingredients = {{"goethite", 10}},
+    result = "iron-plate"
+  },
+  {
+    type = "recipe",
+    name = "copper-plate-raw",
+    hidden = true,
+    category = "smelting",
+    energy_required = 5,
+    ingredients = {{"chalcocite", 10}},
+    result = "copper-plate"
+  },
 })

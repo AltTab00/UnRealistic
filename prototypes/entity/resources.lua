@@ -24,59 +24,6 @@ goethite = {
   }
 }
 
-
---[[bobmods.ores.goethite =
-{
-  name = "goethite-ore",
-  tint = {r=0.777, g=0.7, b=0.333},
-  map_color = {r=0.777, g=0.7, b=0.333},
-  mining_time = 1.5,
-  enabled = false,
-  --icon = "__bobores__/graphics/icons/bauxite-ore.png",
-  stage_mult = 100,
-  item =
-  {
-    create = true,
-    create_variations = true,
-    subgroup = "bob-ores",
-  },
-  sprite =
-  {
-    sheet = 1
-  },
---  autoplace = 
-  {
-    create = true,
-    starting_area = false,
-    richness = 0.8,
-    size = 1.5
---  }
-
-  autoplace = "control-only",
-}
-
-function bobmods.ores.goethite.create_autoplace()
-    if resource_generator then
-      resource_generator.setup_resource_autoplace_data("goethite-ore", {
-        name = "goethite-ore",
-        order = "c",
-        base_density = 8,
-        has_starting_area_placement = true,
-        regular_rq_factor_multiplier = 1,
-      }
-      )
-    else
-      data.raw.resource["goethite-ore"].autoplace = resource_autoplace.resource_autoplace_settings{
-        name = "goethite-ore",
-        order = "c",
-        base_density = 8,
-        has_starting_area_placement = true,
-        regular_rq_factor_multiplier = 1,
-      }
-    end
-    bobmods.ores.rutile.enabled = true
-  end]]--
-
 magnetite = {
     name = "magnetite",
     tint = {r = 0.250, g = 0.250, b = 0.250},
@@ -286,3 +233,25 @@ magnetite = {
         size = 0.7
     }
   }
+sandstone = {
+    name = "sandstone",
+    tint = {r = 0.941176471, g = 0.9, b = 0.758},
+    hardness = 1.5,
+    mining_time = 2,
+    walking_sound = sounds.ore,
+    enabled = true,
+    stage_mult = 10,
+    item = {
+        create = true,
+        stack_size = 200
+    },
+    sprite = {
+        sheet = 2
+    },
+    autoplace = {
+        create = true,
+        starting_area = false,
+        richness = 5,
+        size = 0.7
+    }
+}

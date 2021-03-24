@@ -66,7 +66,7 @@ magnetite = {
     },
     autoplace = {
         create = true,
-        starting_area = true,
+        starting_area = false,
         richness = 0.7,
         size = 3
     }
@@ -77,7 +77,7 @@ magnetite = {
     tint = {r = 0.517, g = 0.517, b = 0.517},
     map_color = {r = 0.517, g = 0.517, b = 0.517},
     hardness = 1.5,
-    mining_time = 2,
+    mining_time = 1,
     walking_sound = sounds.ore,
     enabled = true,
     stage_mult = 10,
@@ -90,7 +90,7 @@ magnetite = {
     },
     autoplace = {
         create = true,
-        starting_area = false,
+        starting_area = true,
         richness = 5,
         size = 0.7
     }
@@ -192,13 +192,15 @@ magnetite = {
     tint = {r = 0.231, g = 0.113, b = 0.070},
     map_color = {r = 0, g = 0, b = 0},
     hardness = 1.5,
-    mining_time = 2,
+    mining_time = 1.2,
     walking_sound = sounds.ore,
     enabled = true,
     stage_mult = 10,
     item = {
         create = true,
-        stack_size = 200
+        stack_size = 200,
+        fuel_category = "fire",
+        fuel_value = "2MJ",
     },
     sprite = {
         sheet = 1

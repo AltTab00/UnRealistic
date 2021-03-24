@@ -1,6 +1,3 @@
-data.raw["item"]["wood"].fuel_category = "fire"
-data.raw["item"]["wooden-chest"].fuel_category = "fire"
-data.raw["item"]["wooden-chest"].fuel_value = "1MJ"
 
 data:extend({
     {type = "item",
@@ -67,9 +64,19 @@ data:extend({
     name = "basic-furnace",
     icon = "__UnRealistic__/graphics/icons/basic-furnace.png",
     icon_size = 64, icon_mipmaps = 4,
-    subgroup = "production-machine",
+    subgroup = "smelting-machine",
     order = "g[furnace]",
     place_result = "basic-furnace",
    stack_size = 10
+  },
+  {
+    type="item",
+    name = "small-boiler",
+    icon = "__UnRealistic__/graphics/icons/small-boiler.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "intermediate-product",
+    order = "a[boiler]",
+    stack_size = 100
   },
 })

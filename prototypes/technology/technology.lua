@@ -1,5 +1,6 @@
 data.raw["technology"]["steel-axe"].prerequisites = {"steel-processing","iron-pickaxe"}
 data.raw["technology"]["steel-axe"].effects = {{type = "character-mining-speed", modifier = 0.4}}
+data.raw["technology"]["stone-wall"].prerequisites = {"furnaces"}
 --data.raw["technology"]["steel-processing"].prerequisites = {"mining","metalworking"}
 --temp
 data.raw["technology"]["steel-processing"].prerequisites = {"material-sampling"}
@@ -19,8 +20,6 @@ data.raw["technology"]["military"].prerequisites = {"material-sampling"}
 data.raw["technology"]["logistic-science-pack"].prerequisites = {"material-sampling"}
 --temp
 data.raw["technology"]["oil-processing"].prerequisites = {"material-sampling"}
---temp
-data.raw["technology"]["stone-wall"].prerequisites = {"material-sampling"}
 --temp
 data.raw["technology"]["gun-turret"].prerequisites = {"material-sampling"}
 
@@ -111,7 +110,8 @@ data:extend({
     count = 10,
     ingredients =
     {
-      {"wood-sample", 2} --address ingredients
+      {"wood-sample", 2},
+      {"stone-sample", 2}
     },
     time = 5
   }
@@ -219,6 +219,48 @@ data:extend({
       time = 5
     }
   },
+  {
+    type = "technology",
+  name = "metalworking",
+    icon = "__UnRealistic__/graphics/entity/technology/metalworking.png",
+    icon_size = 76,
+   effects = {
+              {
+                type = "unlock-recipe",
+                recipe = "iron-chest"
+              },
+              {
+               type = "unlock-recipe",
+               recipe = "pipe"
+              },
+              {
+              type = "unlock-recipe",
+               recipe = "pipe-to-ground"
+              },
+              {
+              type = "unlock-recipe",
+              recipe = "iron-stick"
+              },
+              {
+               type = "unlock-recipe",
+               recipe = "iron-gear-wheel"
+              },
+              {
+              type = "unlock-recipe",
+              recipe = "small-boiler"
+              }
+           },
+   prerequisites = {"smelting"},
+   unit =
+    {
+      count = 5,
+      ingredients =
+      {
+        {"stone-sample", 3}
+      },
+      time = 5
+    }
+},
 
   --[[
   {
@@ -252,44 +294,7 @@ data:extend({
         time = 5
       }
   },
-  {
-      type = "technology",
-	  name = "metalworking",
-      icon = "__base__/graphics/icons/iron-plate.png",
-			icon_size = 32,
-	  effects = {
-		{
-            type = "unlock-recipe",
-            recipe = "iron-chest"
-        },
-		{
-            type = "unlock-recipe",
-            recipe = "pipe"
-        },
-		{
-            type = "unlock-recipe",
-            recipe = "pipe-to-ground"
-        },
-		{
-            type = "unlock-recipe",
-            recipe = "iron-stick"
-        },
-		{
-            type = "unlock-recipe",
-            recipe = "iron-gear-wheel"
-        }
-			},
-       prerequisites = {"smelting"},
-	   unit =
-      {
-        count = 15,
-        ingredients =
-        {
-          {"science-pack-0", 2}
-        },
-        time = 5
-      }
-  },
+
   
   {
       type = "technology",

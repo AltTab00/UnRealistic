@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 This file tries to adhere to Semantic versioning (https://semver.org/spec/v2.0.0.html)
 
+## [0.1.7] unreleased
+
+### Added
+
+- small boiler
+- new early techs
+
+### Changed
+
+- Some early stages tweaks (e.g. mining times and material cost)
+
 ## [0.1.6] 22-mar-2021
 
 ### Added

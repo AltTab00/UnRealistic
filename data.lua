@@ -1,6 +1,6 @@
 require("prototypes.categories.fuel-category")
-require("prototypes.item.item")
 require("prototypes.entity.resources")
+require("prototypes.item.item")
 require("prototypes.entity.entity")
 require("prototypes.recipe.recipe")
 require("prototypes.technology.technology")
@@ -18,15 +18,15 @@ data.raw.resource["goethite"].autoplace = resource_autoplace.resource_autoplace_
   }
 bobmods.lib.resource.generate(magnetite)
 bobmods.lib.resource.generate(malachite)
-data.raw.resource["malachite"].autoplace = resource_autoplace.resource_autoplace_settings
+bobmods.lib.resource.generate(chalcocite)
+data.raw.resource["chalcocite"].autoplace = resource_autoplace.resource_autoplace_settings
   {
-    name = "malachite",
+    name = "chalcocite",
     order = "c",
     base_density = 8,
     has_starting_area_placement = true,
     regular_rq_factor_multiplier = 1,
   }
-bobmods.lib.resource.generate(chalcocite)
 bobmods.lib.resource.generate(granite)
 bobmods.lib.resource.generate(peridotite)
 bobmods.lib.resource.generate(anorthosite)
@@ -43,6 +43,8 @@ data.raw.resource["lignite"].autoplace = resource_autoplace.resource_autoplace_s
 bobmods.lib.resource.generate(anthracite)
 bobmods.lib.resource.generate(sandstone)
 
+
+require("prototypes.item.item")
 --Original ore removal--###################################################
 
 data.raw.resource['iron-ore'].autoplace = nil
@@ -94,3 +96,13 @@ end
 data.raw["simple-entity"]['rock-huge'].minable.results = {{name = "granite", amount_min = 24, amount_max = 50}, {name = "lignite", amount_min = 24, amount_max = 50}}
 data.raw["simple-entity"]['rock-big'].minable.results = {{name = "anorthosite", amount_min = 12, amount_max = 23}, {name = "magnetite", amount_min = 10, amount_max = 20}}
 data.raw["simple-entity"]['sand-rock-big'].minable.results = {{name = "sandstone", amount_min = 19, amount_max = 25}}
+
+--Fuel Overhaul and fuel attribuition################################
+
+data.raw["item"]["lignite"].fuel_category = "fire"
+data.raw["item"]["lignite"].fuel_value = "2MJ"
+data.raw["item"]["anthracite"].fuel_category = "fire"
+data.raw["item"]["anthracite"].fuel_value = "8MJ"
+data.raw["item"]["wood"].fuel_category = "fire"
+data.raw["item"]["wooden-chest"].fuel_category = "fire"
+data.raw["item"]["wooden-chest"].fuel_value = "1MJ"

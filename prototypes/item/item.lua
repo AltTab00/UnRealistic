@@ -76,7 +76,16 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "intermediate-product",
-    order = "a[boiler]",
+    order = "a[small-boiler]",
+    stack_size = 100
+  },  {
+    type="item",
+    name = "drill-head",
+    icon = "__UnRealistic__/graphics/icons/drill-head.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "intermediate-product",
+    order = "a[drill-head]",
     stack_size = 100
   },
 })

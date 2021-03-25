@@ -1,9 +1,7 @@
 data.raw["technology"]["steel-axe"].prerequisites = {"steel-processing","iron-pickaxe"}
 data.raw["technology"]["steel-axe"].effects = {{type = "character-mining-speed", modifier = 0.4}}
-data.raw["technology"]["stone-wall"].prerequisites = {"furnaces"}
---data.raw["technology"]["steel-processing"].prerequisites = {"mining","metalworking"}
---temp
-data.raw["technology"]["steel-processing"].prerequisites = {"material-sampling"}
+data.raw["technology"]["stone-wall"].prerequisites = {"better-furnaces"}
+data.raw["technology"]["steel-processing"].prerequisites = {"iron-pickaxe","metalworking"}
 --temp
 data.raw["technology"]["automation"].prerequisites = {"material-sampling"}
 --temp
@@ -115,7 +113,7 @@ data:extend({
     },
     time = 5
   }
-},
+  },
   {
     type = "technology",
     name = "stone-sample",
@@ -260,14 +258,35 @@ data:extend({
       },
       time = 5
     }
-},
-
-  --[[
+  },
+  {
+    type = "technology",
+  name = "better-furnaces",
+    icon = "__UnRealistic__/graphics/entity/technology/stone-furnace.png",
+    icon_size = 151,
+  effects =
+    {
+      {
+          type = "unlock-recipe",
+          recipe = "stone-furnace"
+      },
+    },
+     prerequisites = {"metalworking"},
+   unit =
+    {
+      count = 5,
+      ingredients =
+      {
+        {"stone-sample", 2}
+      },
+      time = 5
+    }
+  },
   {
       type = "technology",
-	  name = "burner",
-      icon = "__base__/graphics/icons/burner-inserter.png",
-			icon_size = 32,
+	  name = "burner-technology",
+      icon = "__UnRealistic__/graphics/icons/small-boiler.png",
+			icon_size = 64,
 	  effects =
       {
         {
@@ -278,10 +297,6 @@ data:extend({
             type = "unlock-recipe",
             recipe = "boiler"
         },
-		{
-            type = "unlock-recipe",
-            recipe = "burner-mining-drill"
-        },
       },
        prerequisites = {"metalworking"},
 	   unit =
@@ -289,13 +304,42 @@ data:extend({
         count = 10,
         ingredients =
         {
-          {"science-pack-0", 2}
+          {"wood-sample", 2},
+          {"stone-sample", 5}
         },
         time = 5
       }
   },
+  {
+    type = "technology",
+  name = "automated-mining",
+    icon = "__base__/graphics/entity/burner-mining-drill/hr-burner-mining-drill-E.png",
+    icon_size = 170,
+  effects =
+    {
+      {
+          type = "unlock-recipe",
+          recipe = "burner-mining-drill"
+      },
+    {
+          type = "unlock-recipe",
+          recipe = "drill-head"
+      },
+    },
+     prerequisites = {"burner-technology"},
+   unit =
+    {
+      count = 10,
+      ingredients =
+      {
+        {"wood-sample", 2},
+        {"stone-sample", 5}
+      },
+      time = 5
+    }
+},
 
-  
+    --[[
   {
       type = "technology",
 	  name = "electricity",

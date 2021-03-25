@@ -3,11 +3,15 @@
 All notable changes to this project will be documented in this file.
 This file tries to adhere to Semantic versioning (https://semver.org/spec/v2.0.0.html)
 
+## Incoming features
+
+- wiring and archaic generators. grinding stones.
+
 ## [0.1.7] unreleased
 
 ### Added
 
-- small boiler
+- small boiler, drill head
 - new early techs
 
 ### Changed

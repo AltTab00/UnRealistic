@@ -1,35 +1,26 @@
 data.raw["recipe"]["wooden-chest"].enabled = false
 data.raw["recipe"]["stone-brick"].enabled = false
---
 data.raw["recipe"]["iron-chest"].enabled = false
+data.raw["recipe"]["pipe-to-ground"].enabled = false
+data.raw["recipe"]["iron-plate"].enabled = false
+data.raw["recipe"]["copper-plate"].enabled = false
+data.raw["recipe"]["iron-stick"].enabled = false
+data.raw["recipe"]["stone-furnace"].enabled = false
+data.raw["recipe"]["boiler"].enabled = false
 --
 data.raw["recipe"]["transport-belt"].enabled = false
---
-data.raw["recipe"]["burner-inserter"].enabled = false
 --
 data.raw["recipe"]["inserter"].enabled = false
 --
 data.raw["recipe"]["small-electric-pole"].enabled = false
 --
-data.raw["recipe"]["pipe-to-ground"].enabled = false
---
 data.raw["recipe"]["repair-pack"].enabled = false
---
-data.raw["recipe"]["boiler"].enabled = false
 --
 data.raw["recipe"]["offshore-pump"].enabled = false
 --
-data.raw["recipe"]["stone-furnace"].enabled = false
---
 data.raw["recipe"]["lab"].enabled = false
 --
-data.raw["recipe"]["iron-plate"].enabled = false
---
 data.raw["recipe"]["copper-cable"].enabled = false
---
-data.raw["recipe"]["copper-plate"].enabled = false
---
-data.raw["recipe"]["iron-stick"].enabled = false
 --
 data.raw["recipe"]["automation-science-pack"].enabled = false
 --
@@ -43,7 +34,6 @@ data.raw["recipe"]["light-armor"].enabled = false
 
 
 data:extend({
-  --needs to be addressed
   {
     type = "recipe",
     name = "pipe",
@@ -52,25 +42,66 @@ data:extend({
       enabled = false,
       ingredients =
       {
-        {"iron-gear-wheel", 8}, 
-        {"pipe", 5},
-        {"iron-plate", 10}
+        {"iron-plate", 1}
       },
-      result = "steam-engine"
+      result = "pipe"
     },
     expensive =
     {
       enabled = false,
       ingredients =
       {
-        {"iron-gear-wheel", 10},
-        {"pipe", 5},
-        {"iron-plate", 50}
+        {"iron-plate", 2}
       },
-      result = "steam-engine"
+      result = "pipe"
     }
   },
-  --needs to be addressed
+  {
+    type = "recipe",
+    name = "iron-gear-wheel",
+    normal =
+    {
+      enabled = false,
+      ingredients =
+      {
+        {"iron-plate", 2}
+      },
+      result = "iron-gear-wheel"
+    },
+    expensive =
+    {
+      enabled = false,
+      ingredients =
+      {
+        {"iron-plate", 4},
+      },
+      result = "iron-gear-wheel"
+    }
+  },
+  {
+    type = "recipe",
+    name = "stone-furnace",
+    enabled = false,
+    ingredients =
+      {
+        {"stone", 10},
+        {"pipe", 1},
+        {"iron-plate", 2},
+      },
+    result = "stone-furnace"
+  },
+  {
+    type = "recipe",
+    name = "burner-inserter",
+    enabled = false,
+    ingredients =
+      {
+        {"iron-gear-wheel", 5},
+        {"iron-plate", 1},
+        {"small-boiler", 1},
+      },
+    result = "burner-inserter",
+  },
   {
     type = "recipe",
     name = "burner-mining-drill",
@@ -81,20 +112,26 @@ data:extend({
       {
         {"iron-gear-wheel", 8}, 
         {"pipe", 5},
-        {"iron-plate", 10}
+        {"iron-plate", 2},
+        {"stone-furnace", 1},
+        {"boiler", 1},
+        {"drill-head", 1}
       },
-      result = "steam-engine"
+      result = "burner-mining-drill"
     },
     expensive =
     {
       enabled = false,
       ingredients =
       {
-        {"iron-gear-wheel", 10},
-        {"pipe", 5},
-        {"iron-plate", 50}
+        {"iron-gear-wheel", 15}, 
+        {"pipe", 8},
+        {"iron-plate", 4},
+        {"stone-furnace", 2},
+        {"boiler", 2},
+        {"drill-head", 1}
       },
-      result = "steam-engine"
+      result = "burner-mining-drill"
     }
   },
   --needs to be addressed
@@ -128,33 +165,6 @@ data:extend({
   {
     type = "recipe",
     name = "electronic-circuit",
-    normal =
-    {
-      enabled = false,
-      ingredients =
-      {
-        {"iron-gear-wheel", 8}, 
-        {"pipe", 5},
-        {"iron-plate", 10}
-      },
-      result = "steam-engine"
-    },
-    expensive =
-    {
-      enabled = false,
-      ingredients =
-      {
-        {"iron-gear-wheel", 10},
-        {"pipe", 5},
-        {"iron-plate", 50}
-      },
-      result = "steam-engine"
-    }
-  },
-  --needs to be addressed
-  {
-    type = "recipe",
-    name = "iron-gear-wheel",
     normal =
     {
       enabled = false,
@@ -332,5 +342,12 @@ data:extend({
     enabled = false,
     ingredients = {{"iron-plate", 10}},
     result = "small-boiler"
+  },
+  {
+    type = "recipe",
+    name = "drill-head",
+    enabled = false,
+    ingredients = {{"iron-plate", 2}},
+    result = "drill-head"
   },
 })

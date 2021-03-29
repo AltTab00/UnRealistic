@@ -1,8 +1,10 @@
 require("prototypes.categories.fuel-category")
 require("prototypes.entity.resources")
 require("prototypes.item.item")
+require("prototypes.item.i-resources")
 require("prototypes.entity.entity")
 require("prototypes.recipe.recipe")
+require("prototypes.recipe.r-recipe")
 require("prototypes.technology.technology")
 
 --Ore generation--###################################################

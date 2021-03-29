@@ -13,6 +13,7 @@ This file tries to adhere to Semantic versioning (https://semver.org/spec/v2.0.0
 
 - small boiler, drill head
 - new early techs
+- Crushing tech
 
 ### Changed
 

@@ -102,7 +102,7 @@ data:extend({
       modifier = 0.3
       }
     },
-    prerequisites = {"stone-pickaxe","woodworking"},
+    prerequisites = {"stone-pickaxe","metalworking"},
     unit =
     {
     count = 10,
@@ -337,6 +337,43 @@ data:extend({
       },
       time = 5
     }
+},
+{
+  type = "technology",
+name = "crushing",
+  icon = "__UnRealistic__/graphics/entity/technology/crushing.png",
+  icon_size = 256,
+  icon_mipmaps = 4,
+effects =
+  {
+{
+        type = "unlock-recipe",
+        recipe = "crushed-chalcocite"
+    },
+{
+        type = "unlock-recipe",
+        recipe = "crushed-goethite"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "iron-plate-crsh"
+  },
+  {
+    type = "unlock-recipe",
+    recipe = "copper-plate-crsh"
+}
+  },
+   prerequisites = {"furnaces"},
+ unit =
+  {
+    count = 5,
+    ingredients =
+    {
+      {"wood-sample", 1},
+      {"stone-sample", 3}
+    },
+    time = 5
+  }
 },
 
     --[[

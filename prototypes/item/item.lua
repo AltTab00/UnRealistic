@@ -78,7 +78,8 @@ data:extend({
     subgroup = "intermediate-product",
     order = "a[small-boiler]",
     stack_size = 100
-  },  {
+  },
+  {
     type="item",
     name = "drill-head",
     icon = "__UnRealistic__/graphics/icons/drill-head.png",
@@ -86,6 +87,40 @@ data:extend({
     icon_mipmaps = 4,
     subgroup = "intermediate-product",
     order = "a[drill-head]",
+    stack_size = 100
+  },
+  {
+    type="item",
+    name = "milling-stone",
+    icon = "__UnRealistic__/graphics/icons/milling-stone.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "intermediate-product",
+    fuel_value = "2MJ",
+    fuel_category = "grind",
+    order = "a[milling-stone]",
+    stack_size = 50
+  },
+  {
+    type="item",
+    name = "windmill",
+    icon = "__UnRealistic__/graphics/icons/windmill.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "smelting-machine",
+    order = "a[windmill]",
+    stack_size = 10
+  },
+  {
+    type="item",
+    name = "wood-fibers",
+    icon = "__UnRealistic__/graphics/icons/placeholder.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "intermediate-product",
+    order = "a[wood-fibers]",
+    fuel_value = "1MJ",
+    fuel_category = "fire",
     stack_size = 100
   },
 })

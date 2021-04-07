@@ -53,6 +53,10 @@ data:extend({
           type = "unlock-recipe",
           recipe = "wooden-chest"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "wood-fibers"
+    },
     },
      prerequisites = {"material-sampling"},
    unit =
@@ -364,6 +368,39 @@ effects =
 }
   },
    prerequisites = {"furnaces"},
+ unit =
+  {
+    count = 5,
+    ingredients =
+    {
+      {"wood-sample", 1},
+      {"stone-sample", 3}
+    },
+    time = 5
+  }
+},
+{
+  type = "technology",
+name = "automated-milling",
+  icon = "__UnRealistic__/graphics/entity/technology/placeholder.png",
+  icon_size = 64,
+  icon_mipmaps = 4,
+effects =
+  {
+{
+        type = "unlock-recipe",
+        recipe = "windmill"
+    },
+--[[{
+        type = "unlock-recipe",
+        recipe = "crushed-goethite-w"
+    },
+    {
+      type = "unlock-recipe",
+      recipe = "crushed-chalcocite-w"
+  }]]--
+  },
+   prerequisites = {"crushing"},
  unit =
   {
     count = 5,

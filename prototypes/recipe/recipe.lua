@@ -345,9 +345,30 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "wood-fibers",
+    enabled = false,
+    ingredients = {{"wood", 2}},
+    result = "wood-fibers",
+    result_count = 2
+  },
+  {
+    type = "recipe",
+    name = "windmill",
+    enabled = false,
+    ingredients =
+    {
+      {"iron-plate", 1},
+      {"wood-fibers", 4},
+      {"stone", 8}
+    },
+    result = "windmill"
+  },
+  {
+    type = "recipe",
     name = "drill-head",
     enabled = false,
     ingredients = {{"iron-plate", 2}},
     result = "drill-head"
   },
+
 })

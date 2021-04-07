@@ -5,7 +5,7 @@ This file tries to adhere to Semantic versioning (https://semver.org/spec/v2.0.0
 
 ## Incoming features
 
-- wiring and archaic generators. grinding stones.
+- wiring and archaic generators. milling stones.
 
 ## [0.1.7] unreleased
 
@@ -14,6 +14,7 @@ This file tries to adhere to Semantic versioning (https://semver.org/spec/v2.0.0
 - small boiler, drill head
 - new early techs
 - Crushing tech
+- windmill
 
 ### Changed
 

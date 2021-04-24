@@ -109,6 +109,7 @@ data:extend({
     icon_mipmaps = 4,
     subgroup = "smelting-machine",
     order = "a[windmill]",
+    place_result = "windmill",
     stack_size = 10
   },
   {

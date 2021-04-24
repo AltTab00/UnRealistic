@@ -168,7 +168,6 @@ data:extend({
   name = "furnaces",
     icon = "__UnRealistic__/graphics/entity/technology/basic-furnace.png",
     icon_size = 146,
-    icon_mipmaps = 4,
   effects =
     {
       {
@@ -197,7 +196,6 @@ data:extend({
   name = "smelting",
     icon = "__UnRealistic__/graphics/entity/technology/basic-furnace.png",
     icon_size = 146,
-    icon_mipmaps = 4,
   effects =
     {
   {

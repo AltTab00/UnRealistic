@@ -464,8 +464,10 @@ data:extend({
         percent = 20
       }
     },
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
-    selection_box = {{-0.8, -1}, {0.8, 1}},
+    --collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    --selection_box = {{-0.8, -1}, {0.8, 1}},
+    collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     damaged_trigger_effect = hit_effects.rock(),
     crafting_categories = {"smelting"}, --------------TODO
     result_inventory_size = 1,
@@ -497,31 +499,33 @@ data:extend({
         }
       }]]--
     },
-    on_animation =
+    animation =
     {
       layers =
       {
         {
           filename = "__UnRealistic__/graphics/entity/windmill/working-windmill.png",
-          --tint = {r = 0.8, g = 0.478, b = 0},
-          width = 70,
-          height = 80,
+          priority = "extra-high",
+          tint = {r = 0.8, g = 0.478, b = 0},
+          width = 71,
+          height = 81,
           frame_count = 32,
+          --frame_count = 1,
           line_length = 6,
-          animation_speed = 1 / 3,
-          shift = util.by_pixel(0, 1.5),
-          hr_version =
+          animation_speed = 3,
+          --shift = util.by_pixel(0, 1.5),
+          --[[hr_version =
           {
             filename = "__UnRealistic__/graphics/entity/windmill/working-hr-windmill.png",
             --tint = {r = 0.8, g = 0.478, b = 0},
             width = 142,
-            height = 160,
+            height = 161,
             frame_count = 32,
             line_length = 6,
             animation_speed = 1 / 3,
             shift = util.by_pixel(0, 1.5),
             scale = 0.5
-          }
+          }]]--
         },
 --[[        {
           filename = "__base__/graphics/entity/lab/lab-integration.png",
@@ -569,7 +573,7 @@ data:extend({
             scale = 0.5
           }
         },--]]
-        {
+        --[[{
           filename = "__UnRealistic__/graphics/entity/windmill/working-windmill-shadow.png",
           width = 125,
           height = 95,
@@ -590,66 +594,8 @@ data:extend({
             scale = 0.5,
             draw_as_shadow = true
           }
-        },
-      }
-    },
-    off_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__UnRealistic__/graphics/entity/windmill/working-windmill.png",
-          --tint = {r = 0.8, g = 0.478, b = 0},
-          width = 70,
-          height = 80,
-          frame_count = 1,
-          shift = util.by_pixel(0, 1.5),
-          hr_version =
-          {
-            filename = "__UnRealistic__/graphics/entity/windmill/working-hr-windmill.png",
-            --tint = {r = 0.8, g = 0.478, b = 0},
-            width = 250,
-            height = 190,
-            frame_count = 1,
-            shift = util.by_pixel(0, 1.5),
-            scale = 0.5
-          }
-        },
- --[[       {
-          filename = "__base__/graphics/entity/lab/lab-integration.png",
-          width = 122,
-          height = 81,
-          frame_count = 1,
-          shift = util.by_pixel(0, 15.5),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/lab/hr-lab-integration.png",
-            width = 242,
-            height = 162,
-            frame_count = 1,
-            shift = util.by_pixel(0, 15.5),
-            scale = 0.5
-          }
         },]]--
-        {
-          filename = "__UnRealistic__/graphics/entity/windmill/working-windmill-shadow.png",
-          width = 125,
-          height = 95,
-          frame_count = 1,
-          shift = util.by_pixel(13, 11),
-          draw_as_shadow = true,
-          hr_version =
-          {
-            filename = "__UnRealistic__/graphics/entity/windmill/working-windmill-shadow-hr.png",
-            width = 250,
-            height = 190,
-            frame_count = 1,
-            shift = util.by_pixel(13, 11),
-            draw_as_shadow = true,
-            scale = 0.5
-          }
-        }
-      },
+      }
     },
     --fast_replaceable_group = "windmill",
     --next_upgrade = "stone-furnace",

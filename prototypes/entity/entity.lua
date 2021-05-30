@@ -467,7 +467,7 @@ data:extend({
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     damaged_trigger_effect = hit_effects.rock(),
-    crafting_categories = {"smelting"}, --------------TODO
+    crafting_categories = {"grinding"},
     result_inventory_size = 1,
     energy_usage = "100W",
     crafting_speed = 0.1,
@@ -543,5 +543,117 @@ data:extend({
       rotate = false,
       orientation_to_variation = false
     }
+    },
+    {
+      type = "assembling-machine",
+      name = "assembling-machine-0",
+      icon = "__UnRealistic__/graphics/icons/assembling-machine-0.png",
+      icon_size = 32,
+      flags = {"placeable-neutral", "placeable-player", "player-creation"},
+      minable = {hardness = 0.2, mining_time = 0.5, result = "assembling-machine-0"},
+      max_health = 150,
+      corpse = "big-remnants",
+      dying_explosion = "medium-explosion",
+      resistances =
+      {
+        {
+          type = "fire",
+          percent = 40
+        }
+      },
+      collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
+      selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+      fast_replaceable_group = "assembling-machine",
+      animation =
+      {
+        layers =
+        {
+          {
+            filename = "__base__/graphics/entity/assembling-machine-1/assembling-machine-1.png",
+            tint = {r = 0.4, g = 0.4, b = 0.4},
+            priority = "high",
+            width = 108,
+            height = 110,
+            frame_count = 32,
+            line_length = 8,
+            shift = util.by_pixel(0, 4),
+            hr_version = {
+              filename = "__base__/graphics/entity/assembling-machine-1/hr-assembling-machine-1.png",
+              tint = {r = 0.4, g = 0.4, b = 0.4},
+              priority = "high",
+              width = 214,
+              height = 218,
+              frame_count = 32,
+              line_length = 8,
+              shift = util.by_pixel(0, 4),
+              scale = 0.5
+            }
+          },
+          {
+            filename = "__base__/graphics/entity/assembling-machine-1/assembling-machine-1-shadow.png",
+            priority="high",
+            width = 95,
+            height = 83,
+            frame_count = 32,
+            line_length = 8,
+            draw_as_shadow = true,
+            shift = util.by_pixel(8.5, 5.5),
+            hr_version = {
+              filename = "__base__/graphics/entity/assembling-machine-1/hr-assembling-machine-1-shadow.png",
+              priority="high",
+              width = 190,
+              height = 165,
+              frame_count = 32,
+              line_length = 8,
+              draw_as_shadow = true,
+              shift = util.by_pixel(8.5, 5),
+              scale = 0.5
+            }
+          },
+        },
+      },
+      open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
+      close_sound = { filename = "__base__/sound/machine-close.ogg", volume = 0.75 },
+      vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
+      working_sound =
+      {
+        sound = {
+          {
+            filename = "__base__/sound/furnace.ogg",
+            volume = 0.8
+          },
+        },
+        idle_sound = { filename = "__base__/sound/idle1.ogg", volume = 0.6 },
+        apparent_volume = 1.5,
+      },
+      crafting_categories = {"crafting"},
+      crafting_speed = 0.10,
+      energy_source =
+      {
+        type = "burner",
+        fuel_category = "fire",
+        effectivity = 0.3,
+        fuel_inventory_size = 1,
+        emissions_per_minute = 4,
+        light_flicker =
+        {
+          color = {0,0,0},
+          minimum_intensity = 0.1,
+          maximum_intensity = 0.5
+        },
+        smoke =
+        {
+          {
+            name = "smoke",
+            deviation = {0.1, 0.1},
+            frequency = 9,
+            position = {0.0, -0.8},
+            starting_vertical_speed = 0.08,
+            starting_frame_deviation = 60
+          }
+        }
+      },
+      energy_usage = "450kW",
+      ingredient_count = 2,
     },
 })

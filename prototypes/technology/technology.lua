@@ -379,6 +379,31 @@ effects =
 },
 {
   type = "technology",
+name = "automated-assembly",
+  icon = "__UnRealistic__/graphics/entity/technology/placeholder.png",
+  icon_size = 64,
+  icon_mipmaps = 4,
+effects =
+  {
+{
+        type = "unlock-recipe",
+        recipe = "assembling-machine-0"
+    },
+  },
+   prerequisites = {"burner-technology"},
+ unit =
+  {
+    count = 4,
+    ingredients =
+    {
+      {"wood-sample", 1},
+      {"stone-sample", 5}
+    },
+    time = 5
+  }
+},
+{
+  type = "technology",
 name = "automated-milling",
   icon = "__UnRealistic__/graphics/entity/technology/placeholder.png",
   icon_size = 64,

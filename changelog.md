@@ -5,7 +5,7 @@ This file tries to adhere to Semantic versioning (https://semver.org/spec/v2.0.0
 
 ## Incoming features
 
-- wiring and archaic generators. milling stones.
+- wiring and archaic generators.
 
 ## [0.1.7] unreleased
 
@@ -15,10 +15,16 @@ This file tries to adhere to Semantic versioning (https://semver.org/spec/v2.0.0
 - new early techs
 - Crushing tech
 - windmill
+- burner assembly machine
 
 ### Changed
 
 - Some early stages tweaks (e.g. mining times and material cost)
+- Redesign on fuels
+
+### Known Bugs
+
+- Furnace does not accept fuel anymore
 
 ## [0.1.6] 22-mar-2021
 

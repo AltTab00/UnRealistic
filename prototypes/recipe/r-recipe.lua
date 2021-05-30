@@ -23,6 +23,7 @@ data:extend({
         type = "recipe",
         name = "crushed-goethite",
         enabled = false,
+        category = "grinding",
         ingredients = {{"goethite", 1}},
         result = "crushed-goethite"
     },
@@ -30,6 +31,7 @@ data:extend({
         type = "recipe",
         name = "crushed-chalcocite",
         enabled = false,
+        category = "grinding",
         ingredients = {{"chalcocite", 1}},
         result = "crushed-chalcocite"
     },

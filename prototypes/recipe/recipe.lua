@@ -318,26 +318,6 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "iron-plate-raw",
-    hidden = true,
-    enabled = false,
-    category = "smelting",
-    energy_required = 5,
-    ingredients = {{"goethite", 10}},
-    result = "iron-plate"
-  },
-  {
-    type = "recipe",
-    name = "copper-plate-raw",
-    hidden = true,
-    enabled = false,
-    category = "smelting",
-    energy_required = 5,
-    ingredients = {{"chalcocite", 10}},
-    result = "copper-plate"
-  },
-  {
-    type = "recipe",
     name = "small-boiler",
     enabled = false,
     ingredients = {{"iron-plate", 10}},
@@ -370,5 +350,19 @@ data:extend({
     ingredients = {{"iron-plate", 2}},
     result = "drill-head"
   },
-
+  {
+    type = "recipe",
+    name = "assembling-machine-0",
+    enabled = false,
+    ingredients =
+    {
+      {"iron-gear-wheel", 10}, 
+      {"pipe", 2},
+      {"iron-plate", 4},
+      {"stone-furnace", 1},
+      {"boiler", 1},
+      {"burner-inserter", 4}
+    },
+    result = "assembling-machine-0"
+  },
 })

@@ -124,4 +124,14 @@ data:extend({
     fuel_category = "fire",
     stack_size = 100
   },
+  {
+    type="item",
+    name = "assembling-machine-0",
+    icon = "__UnRealistic__/graphics/icons/assembling-machine-0.png",
+    icon_size = 32,
+    subgroup = "production-machine",
+    order = "a[assembling-machine-0]",
+    place_result = "assembling-machine-0",
+    stack_size = 10
+  },
 })

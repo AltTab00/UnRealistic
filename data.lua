@@ -1,4 +1,5 @@
 require("prototypes.categories.fuel-category")
+require("prototypes.categories.recipe-category")
 require("prototypes.entity.resources")
 require("prototypes.item.item")
 require("prototypes.item.i-resources")

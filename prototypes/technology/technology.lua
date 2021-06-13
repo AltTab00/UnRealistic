@@ -1,6 +1,7 @@
 data.raw["technology"]["steel-axe"].prerequisites = {"steel-processing","iron-pickaxe"}
 data.raw["technology"]["steel-axe"].effects = {{type = "character-mining-speed", modifier = 0.4}}
 data.raw["technology"]["stone-wall"].prerequisites = {"better-furnaces"}
+data.raw["technology"]["stone-wall"].unit.ingredients.normal = {"stone-sample", 2}
 data.raw["technology"]["steel-processing"].prerequisites = {"iron-pickaxe","metalworking"}
 --temp
 data.raw["technology"]["automation"].prerequisites = {"material-sampling"}
@@ -300,7 +301,10 @@ data:extend({
             recipe = "boiler"
         },
       },
-       prerequisites = {"metalworking"},
+       prerequisites = {
+       {"metalworking"},
+       {"better-furnaces"}
+    },
 	   unit =
       {
         count = 10,
@@ -328,7 +332,10 @@ data:extend({
           recipe = "drill-head"
       },
     },
-     prerequisites = {"burner-technology"},
+     prerequisites =
+    {
+      {"burner-technology"},
+    },
    unit =
     {
       count = 10,
@@ -350,11 +357,11 @@ effects =
   {
 {
         type = "unlock-recipe",
-        recipe = "crushed-chalcocite"
+        recipe = "crushed-chalcocite-h"
     },
 {
         type = "unlock-recipe",
-        recipe = "crushed-goethite"
+        recipe = "crushed-goethite-h"
     },
     {
       type = "unlock-recipe",
@@ -365,7 +372,7 @@ effects =
     recipe = "copper-plate-crsh"
 }
   },
-   prerequisites = {"furnaces"},
+   prerequisites = {"smelting"},
  unit =
   {
     count = 5,
@@ -399,7 +406,7 @@ effects =
       {"wood-sample", 1},
       {"stone-sample", 5}
     },
-    time = 5
+    time = 15
   }
 },
 {
@@ -414,14 +421,18 @@ effects =
         type = "unlock-recipe",
         recipe = "windmill"
     },
---[[{
-        type = "unlock-recipe",
-        recipe = "crushed-goethite-w"
-    },
     {
       type = "unlock-recipe",
-      recipe = "crushed-chalcocite-w"
-  }]]--
+      recipe = "milling-stone"
+  },
+    {
+      type = "unlock-recipe",
+      recipe = "crushed-chalcocite"
+  },
+{
+      type = "unlock-recipe",
+      recipe = "crushed-goethite"
+  },
   },
    prerequisites = {"crushing"},
  unit =

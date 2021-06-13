@@ -345,6 +345,14 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "milling-stone",
+    enabled = false,
+    ingredients = {{"stone", 2}},
+    energy_required = 2,
+    result = "milling-stone"
+  },
+  {
+    type = "recipe",
     name = "drill-head",
     enabled = false,
     ingredients = {{"iron-plate", 2}},

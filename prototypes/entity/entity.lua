@@ -1,3 +1,7 @@
+data.raw.furnace["stone-furnace"].energy_source.fuel_category = "fire"
+data.raw.boiler["boiler"].energy_source.fuel_category = "fire"
+data.raw.inserter["burner-inserter"].energy_source.fuel_category = "fire"
+data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_category = "fire"
 data.raw["lab"]["lab"].fast_replaceable_group = "lab"
 
 local hit_effects = require ("prototypes.entity.hit-effects")

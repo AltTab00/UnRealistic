@@ -37,6 +37,22 @@ data:extend({
     },
     {
         type = "recipe",
+        name = "crushed-goethite-h",
+        enabled = false,
+        energy_required = 10,
+        ingredients = {{"goethite", 1}},
+        result = "crushed-goethite"
+    },
+    {
+        type = "recipe",
+        name = "crushed-chalcocite-h",
+        enabled = false,
+        energy_required = 10,
+        ingredients = {{"chalcocite", 1}},
+        result = "crushed-chalcocite"
+    },
+    {
+        type = "recipe",
         name = "iron-plate-crsh",
         hidden = true,
         enabled = false,

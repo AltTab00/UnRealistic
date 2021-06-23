@@ -1,8 +1,13 @@
+require("config")
+
 local function set_inventory(e)
   local player = game.players[e.player_index]
   player.clear_items_inside()
   player.insert{name="pistol", count=1}
   player.insert{name="ai-unit", count=1}
+  if EASY_STARTUP then
+    player.insert{name="burner-mining-drill", count=2}
+  end
 end
 
 local function player_created(e)

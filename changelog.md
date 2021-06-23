@@ -16,6 +16,7 @@ This file tries to adhere to Semantic versioning (https://semver.org/spec/v2.0.0
 - Crushing tech
 - windmill
 - burner assembly machine
+- added easy startup mode option (starting with 2 burner mining drill)
 
 ### Changed
 
